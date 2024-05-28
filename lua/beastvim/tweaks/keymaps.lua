@@ -60,7 +60,7 @@ map("n", "<A-o>", "<C-w>r", { desc = "Rotate window" })
 
 ----------------- HACK: Toggle pin scrolloff -------------------
 map("n", "<leader>to", function()
-  vim.opt.scrolloff = 999 - vim.o.scrolloff
+    vim.opt.scrolloff = 999 - vim.o.scrolloff
 end, { desc = "Toggle pin scrolloff" })
 
 ------------------- Select all --------------------------------
@@ -68,6 +68,6 @@ map("n", "<C-a>", "gg<S-v>G", { desc = "Select all" })
 
 ------------------ Fuzzy Search --------------------------------
 vim.keymap.set("n", "<C-f>", function()
-  -- You can pass additional configuration to telescope to change theme, layout, etc.
-  require("telescope.builtin").current_buffer_fuzzy_find(require("telescope.themes"))
+    -- You can pass additional configuration to telescope to change theme, layout, etc.
+    require("telescope.builtin").current_buffer_fuzzy_find(require("telescope.themes"))
 end, { desc = "[/] Fuzzily search in current buffer]" })

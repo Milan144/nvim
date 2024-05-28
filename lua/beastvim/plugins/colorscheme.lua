@@ -5,20 +5,15 @@ return {
     priority = 1000,
     keys = { { "<leader>C", "<cmd>MonokaiProSelect<cr>", desc = "Select Moonokai pro filter" } },
     opts = {
-      transparent_background = false,
+      transparent_background = true,
       devicons = true,
-      filter = "spectrum", -- classic | octagon | pro | machine | ristretto | spectrum
-      day_night = {
-        enable = true,
-        day_filter = "pro",
-        night_filter = "spectrum",
-      },
+      filter = "pro", -- classic | octagon | pro | machine | ristretto | spectrum
       inc_search = "background", -- underline | background
       background_clear = {
         "nvim-tree",
         "neo-tree",
         "bufferline",
-        -- "telescope",
+        "telescope",
         "toggleterm",
       },
       plugins = {

@@ -6,6 +6,8 @@ return {
   -- UI components
   { "MunifTanjim/nui.nvim", lazy = true },
 
+  { 'severin-lemaignan/vim-minimap', lazy = true },
+
   -- icons
   { "nvim-tree/nvim-web-devicons", lazy = true },
 
