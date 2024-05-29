@@ -3,7 +3,7 @@ return {
     "mg979/vim-visual-multi",
     event = { "BufReadPost", "BufNewFile" },
   },
-
+  { 'wakatime/vim-wakatime', lazy = false },
   {
     "folke/persistence.nvim",
     event = "BufReadPre",
