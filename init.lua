@@ -181,13 +181,7 @@ require('lazy').setup(
             }
             end,
         },
-        { -- GitHub Copilot plugin
-            'github/copilot.vim',
-            config = function()
-                vim.g.copilot_no_tab_map = true
-                vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
-            end,
-        },
+        { 'github/copilot.vim' },
         { -- File tree plugin
             'kyazdani42/nvim-tree.lua',
             requires = {
