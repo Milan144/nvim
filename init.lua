@@ -11,6 +11,9 @@ vim.opt.number = true
 -- Enable mouse mode
 vim.opt.mouse = 'a'
 
+-- Save with ctrl+s
+vim.api.nvim_set_keymap('n', '<C-s>', ':w<CR>', { noremap = true })
+
 -- Don't show the mode, since it's already in the status line
 vim.opt.showmode = false
 
@@ -165,20 +168,20 @@ require('lazy').setup(
             'nvim-treesitter/nvim-treesitter',
             run = ':TSUpdate',
             opts = {
-            ensure_installed = "maintained", -- Only use parsers that are maintained
-            highlight = {
-                enable = true, -- false will disable the whole extension
-            },
-            indent = {
-                enable = true,
-            },
+                ensure_installed = 'maintained', -- Only use parsers that are maintained
+                highlight = {
+                    enable = true, -- false will disable the whole extension
+                },
+                indent = {
+                    enable = true,
+                },
             },
             config = function()
-            require('nvim-treesitter.configs').setup {
-                highlight = {
-                enable = true,
-                },
-            }
+                require('nvim-treesitter.configs').setup {
+                    highlight = {
+                        enable = true,
+                    },
+                }
             end,
         },
         { 'github/copilot.vim' },
@@ -728,19 +731,11 @@ require('lazy').setup(
                 }
             end,
         },
-        { -- You can easily change to a different colorscheme.
-            -- Change the name of the colorscheme plugin below, and then
-            -- change the command in the config to whatever the name of that colorscheme is.
-            --
-            -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
+        {
             'Mofiqul/dracula.nvim',
             priority = 1000, -- Make sure to load this before all the other start plugins.
             init = function()
-                -- Load the colorscheme here.
-                -- Like many other themes, this one has different styles, and you could load
-                -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
                 vim.cmd.colorscheme 'dracula'
-
                 -- You can configure highlights by doing something like:
                 vim.cmd.hi 'Comment gui=none'
             end,
@@ -1035,6 +1030,14 @@ require('lazy').setup(
                 }
             end,
             dependencies = { { 'nvim-tree/nvim-web-devicons' } },
+        },
+        {
+            'folke/zen-mode.nvim',
+            opts = {
+                -- your configuration comes here
+                -- or leave it empty to use the default settings
+                -- refer to the configuration section below
+            },
         },
         {
             'lewis6991/gitsigns.nvim',
