@@ -161,6 +161,54 @@ require('lazy').setup(
                 },
             },
         },
+        { -- Tree-sitter configurations and abstraction layer for Neovim
+            'nvim-treesitter/nvim-treesitter',
+            run = ':TSUpdate',
+            opts = {
+            ensure_installed = "maintained", -- Only use parsers that are maintained
+            highlight = {
+                enable = true, -- false will disable the whole extension
+            },
+            indent = {
+                enable = true,
+            },
+            },
+            config = function()
+            require('nvim-treesitter.configs').setup {
+                highlight = {
+                enable = true,
+                },
+            }
+            end,
+        },
+        { -- GitHub Copilot plugin
+            'github/copilot.vim',
+            config = function()
+                vim.g.copilot_no_tab_map = true
+                vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+            end,
+        },
+        { -- File tree plugin
+            'kyazdani42/nvim-tree.lua',
+            requires = {
+                'kyazdani42/nvim-web-devicons', -- optional, for file icons
+            },
+            config = function()
+                require('nvim-tree').setup {
+                    view = {
+                        width = 30,
+                        side = 'left',
+                    },
+                    actions = {
+                        open_file = {
+                            quit_on_open = true,
+                        },
+                    },
+                }
+                -- Keybindings for nvim-tree
+                vim.api.nvim_set_keymap('n', '<leader>e', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
+            end,
+        },
         { -- Useful plugin to show you pending keybinds.
             'folke/which-key.nvim',
             event = 'VimEnter', -- Sets the loading event to 'VimEnter'
