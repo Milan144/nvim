@@ -1013,19 +1013,16 @@ require('lazy').setup(
             config = function()
                 require('dashboard').setup {
                     config = {
-                        center = {
-                            {
-                                icon = '',
-                                icon_hl = 'group',
-                                desc = 'description',
-                                desc_hl = 'group',
-                                key = 'shortcut key in dashboard buffer not keymap !!',
-                                key_hl = 'group',
-                                key_format = ' [%s]', -- `%s` will be substituted with value of `key`
-                                action = '',
-                            },
+                        shortcut = {
+                            -- Ensure 'desc' is a string and 'group' has valid characters
+                            { desc = "Open File", group = 'highlight_group', key = 'f', action = 'Telescope find_files' },
+                            { desc = "Recent Files", group = 'highlight_group', key = 'r', action = 'Telescope oldfiles' },
+                            { desc = "Config", group = 'highlight_group', key = 'c', action = 'edit ~/.config/nvim/init.lua' },
                         },
-                        footer = {},
+                        packages = { enable = true }, -- show how many plugins neovim loaded
+                        project = { enable = true, limit = 8, icon = '📁', label = 'Projects', action = 'Telescope find_files cwd=' },
+                        mru = { limit = 10, icon = '📄', label = 'Recent Files', cwd_only = false },
+                        footer = {}, -- footer
                     },
                 }
             end,
@@ -1038,6 +1035,31 @@ require('lazy').setup(
                 -- or leave it empty to use the default settings
                 -- refer to the configuration section below
             },
+        },
+        {
+            'VidocqH/lsp-lens.nvim',
+            config = function()
+                require('lsp-lens').setup {}
+            end,
+        },
+        {
+            'chrisgrieser/nvim-rip-substitute',
+            config = function()
+                require('rip-substitute').setup {
+                    -- Add any additional configuration options here
+                    on_open = function()
+                        -- Ensure the buffer name is unique
+                        local buf_name = 'RipSubstitute'
+                        local buf_exists = vim.fn.bufexists(buf_name) == 1
+                        if buf_exists then
+                            vim.cmd('bwipeout ' .. buf_name)
+                        end
+                    end,
+                }
+            end,
+        },
+        {
+            'ThePrimeagen/vim-be-good',
         },
         {
             'lewis6991/gitsigns.nvim',
