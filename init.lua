@@ -1015,9 +1015,9 @@ require('lazy').setup(
                     config = {
                         shortcut = {
                             -- Ensure 'desc' is a string and 'group' has valid characters
-                            { desc = "Open File", group = 'highlight_group', key = 'f', action = 'Telescope find_files' },
-                            { desc = "Recent Files", group = 'highlight_group', key = 'r', action = 'Telescope oldfiles' },
-                            { desc = "Config", group = 'highlight_group', key = 'c', action = 'edit ~/.config/nvim/init.lua' },
+                            { desc = 'Open File', group = 'highlight_group', key = 'f', action = 'Telescope find_files' },
+                            { desc = 'Recent Files', group = 'highlight_group', key = 'r', action = 'Telescope oldfiles' },
+                            { desc = 'Config', group = 'highlight_group', key = 'c', action = 'edit ~/.config/nvim/init.lua' },
                         },
                         packages = { enable = true }, -- show how many plugins neovim loaded
                         project = { enable = true, limit = 8, icon = '📁', label = 'Projects', action = 'Telescope find_files cwd=' },
@@ -1060,6 +1060,25 @@ require('lazy').setup(
         },
         {
             'ThePrimeagen/vim-be-good',
+        },
+        {
+            'kdheepak/lazygit.nvim',
+            cmd = {
+                'LazyGit',
+                'LazyGitConfig',
+                'LazyGitCurrentFile',
+                'LazyGitFilter',
+                'LazyGitFilterCurrentFile',
+            },
+            -- optional for floating window border decoration
+            dependencies = {
+                'nvim-lua/plenary.nvim',
+            },
+            -- setting the keybinding for LazyGit with 'keys' is recommended in
+            -- order to load the plugin when the command is run for the first time
+            keys = {
+                { '<leader>lg', '<cmd>LazyGit<cr>', desc = 'LazyGit' },
+            },
         },
         {
             'lewis6991/gitsigns.nvim',
