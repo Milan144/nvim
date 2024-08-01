@@ -924,6 +924,7 @@ require('lazy').setup(
             end,
             dependencies = { { 'nvim-tree/nvim-web-devicons' } },
         },
+        { 'wakatime/vim-wakatime', lazy = false },
         {
             'kdheepak/lazygit.nvim',
             cmd = {
