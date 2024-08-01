@@ -6,10 +6,9 @@ vim.g.have_nerd_font = true
 
 -- Make line numbers default
 vim.opt.number = true
--- vim.opt.relativenumber = true
 
--- Enable mouse mode
-vim.opt.mouse = 'a'
+-- Desactivate mouse
+vim.opt.mouse = ''
 
 -- Save with ctrl+s
 vim.api.nvim_set_keymap('n', '<C-s>', ':w<CR>', { noremap = true })
@@ -77,26 +76,8 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, {
     desc = 'Open diagnostic [Q]uickfix list',
 })
 
--- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
--- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
--- is not what someone will guess without a bit more experience.
---
--- NOTE: This won't work in all terminal emulators/tmux/etc. Try your own mapping
--- or just use <C-\><C-n> to exit terminal mode
-vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', {
-    desc = 'Exit terminal mode',
-})
-
--- TIP: Disable arrow keys in normal mode
--- vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
--- vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move!!"<CR>')
--- vim.keymap.set('n', '<up>', '<cmd>echo "Use k to move!!"<CR>')
--- vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
-
 -- Keybinds to make split navigation easier.
 --  Use CTRL+<hjkl> to switch between windows
---
---  See `:help wincmd` for a list of all window commands
 vim.keymap.set('n', '<C-h>', '<C-w><C-h>', {
     desc = 'Move focus to the left window',
 })
@@ -892,10 +873,12 @@ require('lazy').setup(
         },
         {
             'folke/zen-mode.nvim',
-            opts = {
-                -- your configuration comes here
-                -- or leave it empty to use the default settings
-                -- refer to the configuration section below
+            keys = {
+                {
+                    '<leader>zm',
+                    '<cmd>ZenMode<CR>',
+                    desc = '[Z]en [M]ode',
+                },
             },
         },
         {
@@ -925,7 +908,7 @@ require('lazy').setup(
         },
         {
             'MeanderingProgrammer/markdown.nvim',
-            main = "render-markdown",
+            main = 'render-markdown',
             opts = {},
             name = 'render-markdown', -- Only needed if you have another plugin named markdown.nvim
             dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.nvim' }, -- if you use the mini.nvim suite
@@ -935,10 +918,10 @@ require('lazy').setup(
             event = 'VimEnter',
             config = function()
                 require('dashboard').setup {
-                -- config
+                    -- config
                 }
             end,
-            dependencies = { {'nvim-tree/nvim-web-devicons'}}
+            dependencies = { { 'nvim-tree/nvim-web-devicons' } },
         },
         {
             'kdheepak/lazygit.nvim',
