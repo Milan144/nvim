@@ -13,6 +13,9 @@ vim.opt.mouse = ''
 -- Save with ctrl+s
 vim.api.nvim_set_keymap('n', '<C-s>', ':w<CR>', { noremap = true })
 
+-- Disable format on save
+vim.g.format_on_save = 0
+
 -- Don't show the mode, since it's already in the status line
 vim.opt.showmode = false
 
@@ -557,6 +560,9 @@ require('lazy').setup(
                     local disable_filetypes = {
                         c = true,
                         cpp = true,
+                        javascript = true,
+                        typescript = true,
+                        php = true,
                     }
                     return {
                         timeout_ms = 500,
