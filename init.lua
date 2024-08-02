@@ -168,7 +168,10 @@ require('lazy').setup({'tpope/vim-sleuth', -- Detect tabstop and shiftwidth auto
             }
         }
     end
-}, {'github/copilot.vim'}, { -- Useful plugin to show you pending keybinds.
+}, {
+    'github/copilot.vim',
+    event = 'BufRead',
+}, { -- Useful plugin to show you pending keybinds.
     'folke/which-key.nvim',
     event = 'VimEnter', -- Sets the loading event to 'VimEnter'
     config = function() -- This is the function that runs, AFTER loading
@@ -853,6 +856,7 @@ require('lazy').setup({'tpope/vim-sleuth', -- Detect tabstop and shiftwidth auto
     end
 }, {'ThePrimeagen/vim-be-good'}, {
     'MeanderingProgrammer/markdown.nvim',
+    event = 'BufRead',
     main = 'render-markdown',
     opts = {},
     name = 'render-markdown', -- Only needed if you have another plugin named markdown.nvim
