@@ -26,3 +26,4 @@ vim.keymap.set('n', '<C-j>', '<C-w><C-j>', {
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', {
     desc = 'Move focus to the upper window',
 })
+
