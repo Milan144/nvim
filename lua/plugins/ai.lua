@@ -1,5 +1,6 @@
 return {
-{
-    'github/copilot.vim',
-    event = 'BufRead'
-}}
+    {
+        'github/copilot.vim',
+        event = 'BufRead',
+    },
+}
