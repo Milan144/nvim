@@ -35,6 +35,14 @@ return {
                 'query',
                 'vim',
                 'vimdoc',
+                'vue',
+                'javascript',
+                'php',
+                'typescript',
+                'tsx',
+                'twig',
+                'css',
+                'scss'
             },
             -- Autoinstall languages that are not installed
             auto_install = true,
