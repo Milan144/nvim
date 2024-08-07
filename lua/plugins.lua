@@ -2,7 +2,6 @@
 require('lazy').setup {
     'tpope/vim-sleuth',
     {
-        { import = 'plugins.ai' },
         { import = 'plugins.utility' },
         { import = 'plugins.lsp' },
         { import = 'plugins.git' },
