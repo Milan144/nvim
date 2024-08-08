@@ -49,7 +49,14 @@ return {
         for server, config in pairs(servers) do
             lspconfig[server].setup {
                 on_attach = function(client, bufnr)
-                    -- Keybindings and other settings here if needed
+                    -- Go to function definition
+                    local function buf_set_keymap(...)
+                        vim.api.nvim_buf_set_keymap(bufnr, ...)
+                    end
+                    local opts = { noremap = true, silent = true }
+
+                    -- Keybinding for Go to Definition
+                    buf_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
                 end,
                 settings = config
             }

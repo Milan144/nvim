@@ -19,4 +19,5 @@ vim.api.nvim_create_user_command('Pointage', function(opts)
     result = result:gsub("\27%[%d+m", "")
     print(result)
 end, { nargs = '*' }),
+}
 
