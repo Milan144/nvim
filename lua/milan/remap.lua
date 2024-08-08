@@ -27,3 +27,21 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', {
     desc = 'Move focus to the upper window',
 })
 
+-- Pointage command (At work only)
+vim.api.nvim_set_keymap('n', '<leader>p', ':Pointage<Space>', {
+    noremap = true,
+    silent = false
+})
+vim.api.nvim_set_keymap('n', '<leader>pt', ':Pointage time<CR>', {
+    noremap = true,
+    silent = false
+})
+vim.api.nvim_set_keymap('n', '<leader>pe', ':Pointage entree<CR>', {
+    noremap = true,
+    silent = false
+})
+vim.api.nvim_set_keymap('n', '<leader>ps', ':Pointage sortie<CR>', {
+    noremap = true,
+    silent = false
+})
+

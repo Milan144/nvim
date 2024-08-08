@@ -7,4 +7,16 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     callback = function()
         vim.highlight.on_yank()
     end
-})}
+}),
+
+-- Create a Neovim command to execute the script
+vim.api.nvim_create_user_command('Pointage', function(opts)
+    local args = table.concat(opts.fargs, ' ')
+    local handle = io.popen('~/pointage ' .. args)
+    local result = handle:read('*a')
+    handle:close()
+    -- Remove ANSI escape codes
+    result = result:gsub("\27%[%d+m", "")
+    print(result)
+end, { nargs = '*' })
+}
