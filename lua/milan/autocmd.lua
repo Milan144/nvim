@@ -18,5 +18,12 @@ vim.api.nvim_create_user_command('Pointage', function(opts)
     -- Remove ANSI escape codes
     result = result:gsub("\27%[%d+m", "")
     print(result)
-end, { nargs = '*' })
+end, { nargs = '*' }),
+
+vim.api.nvim_create_autocmd("VimEnter", {
+    command = "set nornu nonu | Neotree toggle"
+}),
+vim.api.nvim_create_autocmd("BufEnter", {
+    command = "set rnu nu"
+})
 }
