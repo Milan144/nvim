@@ -20,10 +20,3 @@ vim.api.nvim_create_user_command('Pointage', function(opts)
     print(result)
 end, { nargs = '*' }),
 
-vim.api.nvim_create_autocmd("VimEnter", {
-    command = "set nornu nonu | Neotree toggle"
-}),
-vim.api.nvim_create_autocmd("BufEnter", {
-    command = "set rnu nu"
-})
-}
