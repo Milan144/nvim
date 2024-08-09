@@ -11,7 +11,7 @@ return {
             group = '[D]ocument'
         }, {
             '<leader>r',
-            group = '[R]ename'
+            group = '[R]efactor'
         }, {
             '<leader>s',
             group = '[S]earch'
