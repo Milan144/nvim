@@ -11,7 +11,7 @@ return {
             }
         end,
         mode = '',
-        desc = '[F]ormat buffer'
+        desc = 'Format buffer'
     }},
     opts = {
         notify_on_error = false,

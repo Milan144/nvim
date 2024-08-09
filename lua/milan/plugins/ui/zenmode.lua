@@ -3,7 +3,7 @@ return {
     keys = {{
         '<leader>zm',
         '<cmd>ZenMode<CR>',
-        desc = '[Z]en [M]ode'
+        desc = 'Zen Mode'
     }},
     opts = {
         plugins = {

@@ -4,6 +4,6 @@ return {
     keys = {{
         '<leader>st',
         '<cmd>StartupTime<CR>',
-        desc = '[S]tartup [T]ime'
+        desc = 'Startup Time'
     }}
 }
