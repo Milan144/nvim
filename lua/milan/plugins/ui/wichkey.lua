@@ -5,25 +5,25 @@ return {
         require('which-key').setup()
         require('which-key').add {{
             '<leader>c',
-            group = '[C]ode'
+            group = 'Code'
         }, {
             '<leader>d',
-            group = '[D]ocument'
+            group = 'Document'
         }, {
             '<leader>r',
-            group = '[R]efactor'
+            group = 'Refactor'
         }, {
             '<leader>s',
-            group = '[S]earch'
+            group = 'Search'
         }, {
             '<leader>w',
-            group = '[W]orkspace'
+            group = 'Workspace'
         }, {
             '<leader>t',
-            group = '[T]oggle'
+            group = 'Toggle'
         }, {
             '<leader>h',
-            group = 'Git [H]unk',
+            group = 'Git Hunk',
             mode = {'n', 'v'}
         }}
     end
