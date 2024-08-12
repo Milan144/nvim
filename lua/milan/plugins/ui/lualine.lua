@@ -3,7 +3,7 @@ return {
     opts = function()
       require("lualine").setup({
         options = {
-            theme = 'dracula-nvim'
+            theme = 'monokai-pro'
         },
       })     
     end
