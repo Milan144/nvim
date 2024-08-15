@@ -3,7 +3,7 @@ return {
     priority = 1000, -- Make sure to load this before all the other start plugins.
     config = function()
         require("monokai-pro").setup({
-            transparent_background = false,
+            transparent_background = true,
             terminal_colors = true,
             devicons = true, -- highlight the icons of `nvim-web-devicons`
             styles = {
