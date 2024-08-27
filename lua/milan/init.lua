@@ -21,3 +21,5 @@ vim.opt.rtp:prepend(lazypath)
 -- Load plugins
 require('milan.loader')
 
+-- Colorscheme
+vim.cmd("colorscheme onedark")
