@@ -22,4 +22,5 @@ vim.opt.rtp:prepend(lazypath)
 require('milan.loader')
 
 -- Colorscheme
-vim.cmd("colorscheme onedark")
+-- Available : onedark | dracula | monokai-pro
+vim.cmd("colorscheme monokai-pro")
