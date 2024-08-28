@@ -64,3 +64,6 @@ vim.keymap.set("n", "<leader>co", ":CopilotChatOptimize<CR>")
 vim.keymap.set("n", "<leader>cf", ":CopilotChatFix<CR>")
 vim.keymap.set("n", "<leader>ce", ":CopilotChatExplain<CR>")
 
+-- RipSubstitute
+vim.keymap.set("n", "<leader>rr", ":RipSubstitute<CR>")
+

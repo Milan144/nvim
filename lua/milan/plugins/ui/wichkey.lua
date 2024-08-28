@@ -5,7 +5,7 @@ return {
         require('which-key').setup()
         require('which-key').add {{
             '<leader>c',
-            group = 'Code'
+            group = 'Copilot Chat'
         }, {
             '<leader>d',
             group = 'Document'
