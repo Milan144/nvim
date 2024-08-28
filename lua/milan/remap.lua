@@ -8,6 +8,11 @@ vim.api.nvim_set_keymap('n', '<C-s>', ':w<CR>', {
 vim.opt.hlsearch = true
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
+-- Select all
+vim.api.nvim_set_keymap('n', '<C-a>', 'ggVG', {
+    noremap = true,
+})
+
 -- Diagnostic keymaps
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, {
     desc = 'Open diagnostic [Q]uickfix list',
