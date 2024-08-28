@@ -7,5 +7,6 @@ require('lazy').setup {
         { import = 'milan.plugins.lsp' },
         { import = 'milan.plugins.ui' },
         { import = 'milan.plugins.utils' },
+        { import = 'milan.plugins.ai' },
     },
 }
