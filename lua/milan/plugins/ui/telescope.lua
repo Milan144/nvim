@@ -39,7 +39,7 @@ return { -- Fuzzy Finder (files, lsp, etc)
         vim.keymap.set('n', '<leader>sk', builtin.keymaps, {
             desc = 'Search Keymaps'
         })
-        vim.keymap.set('n', '<leader>sf', builtin.find_files, {
+        vim.keymap.set('n', '<leader><leader>', builtin.find_files, {
             desc = 'Search Files'
         })
         vim.keymap.set('n', '<leader>ss', builtin.builtin, {
@@ -60,7 +60,7 @@ return { -- Fuzzy Finder (files, lsp, etc)
         vim.keymap.set('n', '<leader>s.', builtin.oldfiles, {
             desc = 'Search Recent Files ("." for repeat)'
         })
-        vim.keymap.set('n', '<leader><leader>', builtin.buffers, {
+        vim.keymap.set('n', '<leader>sb', builtin.buffers, {
             desc = '[ ] Find existing buffers'
         })
 
