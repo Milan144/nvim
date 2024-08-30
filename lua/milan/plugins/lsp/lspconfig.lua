@@ -32,7 +32,9 @@ return {
             'cssls', -- CSS
             'tailwindcss', -- Tailwind CSS
             'emmet_ls', -- Emmet (HTML, CSS, etc.)
-            'twiggy_language_server' -- Twig
+            'twiggy_language_server', -- Twig
+            'cobol_ls', -- COBOL
+            'lua_ls' -- Lua
             }
         }
 
@@ -43,7 +45,9 @@ return {
             cssls = {},
             tailwindcss = {},
             emmet_ls = {},
-            twiggy_language_server = {}
+            twiggy_language_server = {},
+            cobol_ls = {},
+            lua_ls = {}
         }
 
         for server, config in pairs(servers) do
