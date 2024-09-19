@@ -22,4 +22,4 @@ vim.opt.rtp:prepend(lazypath)
 require('milan.loader')
 
 -- Load colors
-vim.cmd.colorscheme 'catppuccin'
+vim.cmd.colorscheme 'catppuccin-latte'
