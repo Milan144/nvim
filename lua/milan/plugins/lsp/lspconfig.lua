@@ -33,7 +33,6 @@ return {
             'tailwindcss', -- Tailwind CSS
             'emmet_ls', -- Emmet (HTML, CSS, etc.)
             'twiggy_language_server', -- Twig
-            'cobol_ls', -- COBOL
             'lua_ls', -- Lua
             'clangd', -- C, C++, Objective-C
             }
@@ -47,7 +46,6 @@ return {
             tailwindcss = {},
             emmet_ls = {},
             twiggy_language_server = {},
-            cobol_ls = {},
             lua_ls = {},
             clangd = {}
         }
