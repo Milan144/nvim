@@ -27,7 +27,7 @@ return {
         mason.setup()
         mason_lspconfig.setup {
             ensure_installed = {'intelephense', -- PHP
-            'tsserver', -- JavaScript and TypeScript
+            'ts_ls', -- JavaScript and TypeScript
             'vuels', -- Vue.js
             'cssls', -- CSS
             'tailwindcss', -- Tailwind CSS
@@ -40,7 +40,7 @@ return {
 
         local servers = {
             intelephense = {},
-            tsserver = {},
+            ts_ls = {},
             vuels = {},
             cssls = {},
             tailwindcss = {},
