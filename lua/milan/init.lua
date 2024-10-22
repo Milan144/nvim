@@ -21,3 +21,4 @@ vim.opt.rtp:prepend(lazypath)
 -- Load plugins
 require('milan.loader')
 
+vim.cmd.colorscheme "catppuccin"
