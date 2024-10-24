@@ -1,57 +1,76 @@
 return {
-    'catppuccin/nvim',
-    name = 'catppuccin',
-    priority = 1000,
+  {
+    "rose-pine/neovim",
+    lazy = false,
+    name = "rose-pine",
     config = function()
-        require('catppuccin').setup {
-            flavour = 'auto', -- latte, frappe, macchiato, mocha
-            background = { -- :h background
-                light = 'latte',
-                dark = 'mocha',
-            },
-            transparent_background = true, -- disables setting the background color.
-            show_end_of_buffer = false, -- shows the '~' characters after the end of buffers
-            term_colors = false, -- sets terminal colors (e.g. `g:terminal_color_0`)
-            dim_inactive = {
-                enabled = false, -- dims the background color of inactive window
-                shade = 'dark',
-                percentage = 0.15, -- percentage of the shade to apply to the inactive window
-            },
-            no_italic = false, -- Force no italic
-            no_bold = false, -- Force no bold
-            no_underline = false, -- Force no underline
-            styles = { -- Handles the styles of general hi groups (see `:h highlight-args`):
-                comments = { 'italic' }, -- Change the style of comments
-                conditionals = { 'italic' },
-                loops = {},
-                functions = {},
-                keywords = {},
-                strings = {},
-                variables = {},
-                numbers = {},
-                booleans = {},
-                properties = {},
-                types = {},
-                operators = {},
-                -- miscs = {}, -- Uncomment to turn off hard-coded styles
-            },
-            color_overrides = {},
-            custom_highlights = {},
-            default_integrations = true,
-            integrations = {
-                cmp = true,
-                gitsigns = true,
-                nvimtree = true,
-                treesitter = true,
-                notify = false,
-                mini = {
-                    enabled = true,
-                    indentscope_color = '',
-                },
-                -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
-            },
-        }
-
-        vim.cmd.colorscheme 'catppuccin'
+      require("rose-pine").setup {
+        dark_variant = "moon",
+        styles = {
+          transparency = true,
+        },
+        highlight_groups = {
+          MatchParen = { fg = "love", bg = "love", blend = 25 },
+          StatuslineTextMain = { fg = "text" },
+          StatuslineTextBold = { link = "StatuslineTextMain", bold = true },
+          StatuslineTextAccent = { fg = "muted" },
+          StatuslineModeCommand = { fg = "love", bold = true },
+          StatuslineModeInsert = { fg = "foam", bold = true },
+          StatuslineModeNormal = { fg = "rose", bold = true },
+          StatuslineModeOther = { fg = "rose", bold = true },
+          StatuslineModeReplace = { fg = "pine", bold = true },
+          StatuslineModeVisual = { fg = "iris", bold = true },
+          StatuslineNotSaved = { fg = "gold" },
+          StatuslineReadOnly = { fg = "love" },
+          StatuslineLspOn = { fg = "pine" },
+          StatuslineFormatterStatus = { fg = "foam" },
+          StatuslineCopilot = { fg = "rose" },
+          QuickFixFilename = { fg = "text" },
+          NoiceCmdlinePopupBorder = { fg = "rose" },
+          NoiceCmdlinePopupTitle = { link = "NoiceCmdlinePopupBorder" },
+          NoiceCmdlineIcon = { link = "NoiceCmdlinePopupBorder" },
+          NoiceMini = { fg = "muted" },
+          AvanteTitle = { fg = "rose", bg = "none" },
+          AvanteSubtitle = { fg = "pine", bg = "none" },
+          AvanteThirdTitle = { fg = "iris", bg = "none" },
+          CodeCompanionChatHeader = { fg = "rose" },
+          CodeCompanionChatSeparator = { fg = "muted" },
+          CodeCompanionChatTokens = { fg = "gold" },
+          CodeCompanionChatTool = { fg = "pine" },
+          CodeCompanionChatVariable = { fg = "base", bg = "iris" },
+          CodeCompanionVirtualText = { fg = "iris" },
+          DapUIStepOver = { fg = "foam" },
+          DapUIStepInto = { fg = "foam" },
+          DapUIStepBack = { fg = "foam" },
+          DapUIStepOut = { fg = "foam" },
+          DapUIStop = { fg = "love" },
+          DapUIPlayPause = { fg = "pine" },
+          DapUIRestart = { fg = "pine" },
+          DapUIUnavailable = { fg = "muted" },
+          IndentLineCurrent = { fg = "muted" },
+          EasyDotnetTestRunnerSolution = { fg = "pine" },
+          EasyDotnetTestRunnerProject = { fg = "rose" },
+          EasyDotnetTestRunnerTest = { fg = "iris" },
+          DiagnosticUnderlineError = { bg = "love", blend = 20 },
+          DiagnosticUnderlineHint = { bg = "iris", blend = 20 },
+          DiagnosticUnderlineInfo = { bg = "foam", blend = 20 },
+          DiagnosticUnderlineOk = { bg = "leaf", blend = 20 },
+          DiagnosticUnderlineWarn = { bg = "gold", blend = 20 },
+          DashboardDesc = { fg = "iris" },
+          DashboardFiles = { fg = "iris" },
+          DashboardFooter = { fg = "muted", italic = true },
+          DashboardHeader = { fg = "pine" },
+          DashboardIcon = { fg = "subtle" },
+          DashboardKey = { fg = "gold" },
+          DashboardMruIcon = { link = "DashboardIcon"},
+          DashboardMruTitle = { fg = "iris" },
+          DashboardProjectIcon = { link = "DashboardIcon" },
+          DashboardProjectTitle = { fg = "foam" },
+          DashboardShortcut = { fg = "gold" },
+          DashboardShortcutIcon = { link = "DashboardIcon" },
+        },
+      }
+      vim.cmd "colorscheme rose-pine"
     end,
+  },
 }
