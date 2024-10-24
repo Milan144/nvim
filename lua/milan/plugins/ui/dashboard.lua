@@ -1,6 +1,7 @@
 return {
     "nvimdev/dashboard-nvim",
-    lazy = false,
+    event = 'VimEnter',
+    priority = 1000,
     dependencies = { "echasnovski/mini.icons" },
     opts = function()
       local snufkin = [[
