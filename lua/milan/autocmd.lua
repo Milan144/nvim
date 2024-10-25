@@ -9,7 +9,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     end
 }),
 
--- Create a Neovim command to execute the script
+-- Create a Neovim command to execute the script (Only work at work)
 vim.api.nvim_create_user_command('Pointage', function(opts)
     local args = table.concat(opts.fargs, ' ')
     local handle = io.popen('~/pointage ' .. args)
