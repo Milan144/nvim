@@ -1,10 +1,42 @@
 return {
     'nvim-lualine/lualine.nvim',
     opts = function()
+        local colors = {
+            nc = "#16141f",
+            base = "#191724",
+            surface = "#1f1d2e",
+            overlay = "#26233a",
+            muted = "#6e6a86",
+            subtle = "#908caa",
+            text = "#e0def4",
+            love = "#eb6f92",
+            gold = "#f6c177",
+            rose = "#ebbcba",
+            pine = "#31748f",
+            foam = "#9ccfd8",
+            iris = "#c4a7e7",
+            leaf = "#95b1ac",
+            highlight_low = "#21202e",
+            highlight_med = "#403d52",
+            highlight_high = "#524f67",
+            none = "NONE",
+        }
+
         require('lualine').setup {
             options = {
                 icons_enabled = true,
-                theme = 'rose-pine',
+                theme = {
+                    normal = {
+                        a = { fg = colors.text, bg = colors.none },
+                        b = { fg = colors.subtle, bg = colors.none },
+                        c = { fg = colors.muted, bg = colors.none },
+                    },
+                    inactive = {
+                        a = { fg = colors.muted, bg = colors.none },
+                        b = { fg = colors.muted, bg = colors.none },
+                        c = { fg = colors.muted, bg = colors.none },
+                    },
+                },
                 component_separators = { left = '', right = '' },
                 section_separators = { left = '', right = '' },
                 disabled_filetypes = {
