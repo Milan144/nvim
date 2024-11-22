@@ -59,12 +59,6 @@ vim.keymap.set( "n", "<leader>rI", ":Refactor inline_func")
 vim.keymap.set("n", "<leader>rb", ":Refactor extract_block")
 vim.keymap.set("n", "<leader>rbf", ":Refactor extract_block_to_file")
 
--- Copilot chat
-vim.keymap.set("n", "<leader>cc", ":CopilotChatOpen<CR>")
-vim.keymap.set("n", "<leader>co", ":CopilotChatOptimize<CR>")
-vim.keymap.set("n", "<leader>cf", ":CopilotChatFix<CR>")
-vim.keymap.set("n", "<leader>ce", ":CopilotChatExplain<CR>")
-
 -- RipSubstitute
 vim.keymap.set("n", "<leader>rr", ":RipSubstitute<CR>")
 

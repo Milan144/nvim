@@ -4,9 +4,6 @@ return {
     config = function()
         require('which-key').setup()
         require('which-key').add {{
-            '<leader>c',
-            group = 'Copilot Chat'
-        }, {
             '<leader>d',
             group = 'Document'
         }, {
