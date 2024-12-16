@@ -50,12 +50,6 @@ vim.api.nvim_set_keymap('n', '<leader>ps', ':Pointage sortie<CR>', {
     silent = false
 })
 
--- Copilot chat
-vim.keymap.set("n", "<leader>cc", ":CopilotChatOpen<CR>")
-vim.keymap.set("n", "<leader>co", ":CopilotChatOptimize<CR>")
-vim.keymap.set("n", "<leader>cf", ":CopilotChatFix<CR>")
-vim.keymap.set("n", "<leader>ce", ":CopilotChatExplain<CR>")
-
 -- RipSubstitute
 vim.keymap.set("n", "<leader>rr", ":RipSubstitute<CR>")
 
