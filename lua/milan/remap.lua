@@ -50,14 +50,11 @@ vim.api.nvim_set_keymap('n', '<leader>ps', ':Pointage sortie<CR>', {
     silent = false
 })
 
--- Refactoring
-vim.keymap.set("x", "<leader>re", ":Refactor extract ")
-vim.keymap.set("x", "<leader>rf", ":Refactor extract_to_file ")
-vim.keymap.set("x", "<leader>rv", ":Refactor extract_var ")
-vim.keymap.set({ "n", "x" }, "<leader>ri", ":Refactor inline_var")
-vim.keymap.set( "n", "<leader>rI", ":Refactor inline_func")
-vim.keymap.set("n", "<leader>rb", ":Refactor extract_block")
-vim.keymap.set("n", "<leader>rbf", ":Refactor extract_block_to_file")
+-- Copilot chat
+vim.keymap.set("n", "<leader>cc", ":CopilotChatOpen<CR>")
+vim.keymap.set("n", "<leader>co", ":CopilotChatOptimize<CR>")
+vim.keymap.set("n", "<leader>cf", ":CopilotChatFix<CR>")
+vim.keymap.set("n", "<leader>ce", ":CopilotChatExplain<CR>")
 
 -- RipSubstitute
 vim.keymap.set("n", "<leader>rr", ":RipSubstitute<CR>")
