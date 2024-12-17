@@ -51,9 +51,6 @@ vim.opt.listchars = {
     nbsp = '␣',
 }
 
--- Optimize redrawing
-vim.opt.lazyredraw = true
-
 -- Reduce swap file usage
 vim.opt.swapfile = false
 
