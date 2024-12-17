@@ -34,7 +34,7 @@ vim.opt.smartcase = true
 vim.opt.signcolumn = 'yes'
 
 -- Decrease update time
-vim.opt.updatetime = 250
+vim.opt.updatetime = 100
 
 -- Decrease mapped sequence wait time
 vim.opt.timeoutlen = 300
@@ -50,6 +50,12 @@ vim.opt.listchars = {
     trail = '·',
     nbsp = '␣',
 }
+
+-- Optimize redrawing
+vim.opt.lazyredraw = true
+
+-- Reduce swap file usage
+vim.opt.swapfile = false
 
 -- Preview substitutions live, as you type!
 vim.opt.inccommand = 'split'

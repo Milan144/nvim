@@ -9,5 +9,6 @@ return {
         '<leader>lg',
         '<cmd>LazyGit<cr>',
         desc = 'LazyGit'
-    }}
+    }},
+    event = 'VeryLazy'
 }
